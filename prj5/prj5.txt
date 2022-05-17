@@ -1,0 +1,49 @@
+rank as caller_id
+
+set caller_id to next_id
+q1
+
+sharing resources
+8 phones line
+
+100 threads
+1 phone connect 1 thread
+q2 \
+count = connected
+lock_count 0 1 binary sem
+
+q3
+
+print attempting
+
+sem_wait
+
+
+++count
+print connect
+
+sem_post
+print talking
+
+sllep 2
+print appointment
+
+sem_wait
+print hung up
+--count
+ 
+
+int main(int argc, char* argv[]){
+    if argc != 2
+        exit
+    store (atoi...)
+    if 0 
+        exit
+    pthread thread[atoi store]
+    atoi(argv[1])
+}
+
+
+vim MakeFile
+g1.c 
+    $ gcc g1.c -g -lthread -o -q1
